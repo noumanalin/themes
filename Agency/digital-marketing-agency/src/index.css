@@ -1,0 +1,159 @@
+@import "tailwindcss";
+/* @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');  */
+
+body {
+  /* font-family: "Kanit", sans-serif; */
+  font-family: 'Inter', sans-serif;
+  background-color: #18181b;
+}
+:root {
+  --primary-color:#098ce9;
+  --primary-variant-color: #049394;
+  --section-bg-color:#f1f2f8;
+  --text-color: #333;
+}
+
+
+/* Custom Utils Classes */
+.container-sm {
+  max-width: 1290px;
+  margin-inline: auto;
+  padding-inline: 10px;
+  overflow: hidden;
+}
+
+.container-lg {
+  max-width: 1520px;
+  margin-inline: auto;
+  padding-inline: 10px;
+  overflow: hidden;
+}
+
+.text-light {
+  color: #fff;
+}
+.text-gray {
+  color: #999999;
+}
+
+.line-hight-23 {
+  line-height: 23px;
+}
+
+.white-filter {
+  filter: invert(100%) brightness(2) contrast(2);
+}
+
+
+.after-line::after {
+  content: '';
+  width: 50px;
+  height: 2px;
+  background-color: gray;
+  z-index: 10;
+  position: absolute;
+  left: 0;
+  top: -5px;
+}
+
+ 
+
+.underline-css::after {
+  content: '';
+  width: 0px;
+  height: 2px;
+  background-color: gray;
+  position: absolute;
+  left: 0px;
+  bottom: -2px;
+  transition: width 0.3s ease; 
+}
+
+.underline-css:hover::after {
+  width: 90px;
+}
+
+
+
+/* Reset */
+button {
+  cursor: pointer;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+/* Custom Class with Tailwind */
+
+.center-center {
+  @apply flex justify-center items-center;
+}
+
+.flex-bc {
+  @apply flex justify-between items-center;
+}
+
+.bg-accent {
+    @apply bg-zinc-900;
+}
+
+.bg-dark {
+    @apply bg-[#000];
+}
+
+
+/* Animations */
+
+@keyframes slowBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-slow-bounce {
+  animation: slowBounce 3s linear infinite;
+}
+
+
+
+/* slider.css */
+.mySwiper .swiper-button-next,
+.mySwiper .swiper-button-prev,
+.mySwiper .swiper-pagination {
+  display: none !important; 
+}
+
+.fade-slider .swiper-slide {
+    opacity: 0 !important;
+    transition: opacity 0.8s ease;
+}
+
+.fade-slider .swiper-slide-active,
+.fade-slider .swiper-slide-duplicate-active {
+    opacity: 1 !important;
+}
+
+/* webkit */
+html {
+  scrollbar-width: thin; 
+  scrollbar-color: #555 #fff;
+}
+
+
+
+
+/* Footer */
+@media (min-width: 768px) {
+  .social-link:first-child {
+    border-bottom: none;
+  }
+}
+
