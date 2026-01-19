@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+.font-stylish {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+:root {
+    --primary: #f19d64;
+    --secondary: #5f5e5d;
+}
+
+* {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+button {
+    cursor: pointer;
+}
+
+.wrapper {
+    max-width: 1280px; 
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem; 
+    padding-right: 1rem;  
+}
+
+@media (min-width: 640px) {
+    /* sm breakpoint */
+    .wrapper {
+        padding-left: 0.5rem;
+        /* sm:px-2 */
+        padding-right: 0.5rem;
+    }
+}
+
+
+
+
+
+/* Customize Swiper pagination dots */
+.custom-pagination .swiper-pagination-bullet {
+  background-color: var(--secondary);
+  opacity: 0.4;
+  width: 10px;
+  height: 10px;
+  margin: 0 6px !important;
+  transition: all 0.3s ease;
+}
+
+.custom-pagination .swiper-pagination-bullet-active {
+  background-color: transparent;
+  border: 2px solid var(--primary); 
+  opacity: 1;
+  width: 12px;
+  height: 12px;
+  transform: scale(1.2);
+  border-radius: 50%;
+}
+ 
+.custom-pagination {
+  text-align: center;
+}
+.inner-pages-swiper {
+  padding-bottom: 60px;
+}
+.inner-pages-swiper .swiper-pagination {
+  bottom: 0 !important;
+}
+
+
+
