@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box; 
+  font-family: sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #d8dbdb;
+  --acent-color: #d8dbdb99;
+  --tertiary-color: #99e39e;  
+}
+
+.text-primary {
+  color: #ffffff;
+}
+
+.text-secondary {
+  color: var(--secondary-color);
+}
+
+.text-accent {
+  color: var(--acent-color);
+}
+
+.text-tertiary {
+  color: var(--tertiary-color);
+}
+
+button {
+  cursor: pointer;
+}
+
+.center-center {
+  @apply flex justify-center items-center;
+}
+
+.wrapper {
+  max-width: 1165px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+
