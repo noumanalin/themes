@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+* {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary-bg-color: #fffbf2;
+  --primary-fair: #da9f5b;
+  --primary-dark: #1c110f;
+  --accent-color: #555555;
+
+  /* Extra spinner color variants (optional but useful) */
+  --primary-color-light: #eb9430;
+  --primary-color-medium: #a05b0c;
+  --primary-color-faint: #3b2a15;
+}
+
+body {
+  background-color: var(--primary-bg-color);
+  overflow-x: hidden;
+}
+
+.text-fair {
+  color: var(--primary-fair);
+}
+
+.text-dark {
+  color: var(--primary-dark);
+}
+
+.text-accent {
+  color: var(--accent-color);
+}
+
+
+.wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 45px 10px;
+}
+
+.center-center {
+  @apply flex items-center justify-center;
+}
+
+.bottom-border-shape::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 20px;
+  background-image: url('./assets/overlay-bottom.png');
+  background-repeat: repeat-x;
+}
+
+
+.top-border-shape::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -5px;
+  width: 100%;
+  height: 20px;
+  background-image: url('./assets/overlay-bottom.png');
+  transform: rotate(180deg);
+  background-repeat: repeat-x;
+  z-index: 99; 
+}
+
+
+
+
+.block-border-shape::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 20px;
+  background-image: url('./assets/overlay-bottom.png');
+  background-repeat: repeat-x;
+  z-index: 99;
+}
+
+.block-border-shape::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -5px;
+  width: 100%;
+  height: 20px;
+  background-image: url('./assets/overlay-bottom.png');
+  transform: rotate(180deg);
+  background-repeat: repeat-x;
+  z-index: 99;
+}
+
+
+/* Loading Page */
+.my-spinner {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  border-radius: 50%;
+  -webkit-mask: radial-gradient(farthest-side, #0000 40%, var(--primary-dark) 41%);
+  background:
+    linear-gradient(0deg, var(--primary-color-light) 50%, var(--primary-dark) 0) center/4.5px 100%,
+    linear-gradient(90deg, var(--primary-color-faint) 50%, var(--primary-color-medium) 0) center/100% 4.5px;
+  background-repeat: no-repeat;
+  animation: my-spinner-d3o0rx 1s infinite steps(12);
+}
+
+.my-spinner::before,
+.my-spinner::after {
+  content: "";
+  grid-area: 1/1;
+  border-radius: 50%;
+  background: inherit;
+  opacity: 0.915;
+  transform: rotate(30deg);
+}
+
+.my-spinner::after {
+  opacity: 0.83;
+  transform: rotate(60deg);
+}
+
+@keyframes my-spinner-d3o0rx {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+
+
+
+/* Swiper */
+.swiper-pagination-bullet {
+  background-color: var(--primary-dark) !important;
+  height: 10px !important;
+  transition: all 0.3s ease-in-out;
+}
+
+.swiper-pagination-bullet-active {
+  width: 20px !important;
+  border-radius: 10px !important;
+}

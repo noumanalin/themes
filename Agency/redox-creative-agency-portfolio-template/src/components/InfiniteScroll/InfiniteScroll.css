@@ -1,0 +1,49 @@
+/* Wrapper */
+.infinite-slider {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 100%;
+}
+
+/* Track */
+.infinite-track {
+  display: flex;
+  width: max-content; /* fit dynamic children */
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* Slides */
+.infinite-slide {
+  flex: 0 0 auto;  
+  transition: transform 0.5s ease;
+  cursor: pointer; 
+}
+
+/* Animations */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .infinite-slide {
+    width: 120px;
+    height: 120px;
+  }
+}
