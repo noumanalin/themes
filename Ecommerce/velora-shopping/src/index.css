@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@theme {
+    --color-primary: #ecbf88;
+    /* custom brand blue */
+    --color-brand-dark: #0c47a1;
+    --color-accent: #ff5722;
+}
+
+:root {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+    color: #383737;
+}
