@@ -1,0 +1,172 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Meow+Script&display=swap');
+:root {
+    --primary: teal;
+    --top-primary: #a6f4f4;
+    --secondary: #1c1b1b;
+    --accent: teal;
+    font-family: fantasy;
+}
+
+
+/* Chrome, Safari, Edge */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* Firefox */
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.meow-script-regular {
+    font-family: "Meow Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    color: #5d5d5d;
+    overflow-x: hidden;
+}
+
+
+/*          Testimonial pagination styling          */
+
+.swiper-pagination-bullet {
+    background-color: black;
+    opacity: 0.6;
+    width: 8px;
+    height: 8px;
+    margin: 0 4px !important;
+    transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--primary, ) !important;
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+
+/* HTML: <div class="loader"></div> */
+
+
+/* HTML: <div class="loader"></div> */
+
+.loader {
+    width: 50px;
+    aspect-ratio: 1;
+    display: grid;
+}
+
+.loader::before,
+.loader::after {
+    content: "";
+    grid-area: 1/1;
+    --c: no-repeat radial-gradient(farthest-side, #25b09b 92%, #0000);
+    background: var(--c) 50% 0, var(--c) 50% 100%, var(--c) 100% 50%, var(--c) 0 50%;
+    background-size: 12px 12px;
+    animation: l12 1s infinite;
+}
+
+.loader::before {
+    margin: 4px;
+    filter: hue-rotate(45deg);
+    background-size: 8px 8px;
+    animation-timing-function: linear
+}
+
+@keyframes l12 {
+    100% {
+        transform: rotate(.5turn)
+    }
+}
+
+
+/* HTML: <div class="loader"></div> */
+
+.loader2 {
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 8px solid;
+    border-color: #000 #0000;
+    animation: l1 1s infinite;
+}
+
+@keyframes l1 {
+    to {
+        transform: rotate(.5turn)
+    }
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+}
+
+.rubik {
+    font-family: "Rubik", sans-serif;
+}
+
+.poppins {
+    font-family: "Poppins", sans-serif;
+}
+
+.montserrat {
+    font-family: "Montserrat", sans-serif;
+}
+
+.cairo {
+    font-family: "Cairo", sans-serif;
+}
+
+
+/* custom css */
+
+.sectionlayout {
+    max-width: 1640px;
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+}
+
+@media (max-width: 1023px) {
+    .sectionlayout {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .sectionlayout {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+.animate-slideLeft {
+    animation: slideLeft 0.5s ease-out forwards;
+}
